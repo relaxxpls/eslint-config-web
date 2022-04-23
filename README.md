@@ -1,2 +1,3 @@
-# eslint-config
-No think config to lint your files.
+# eslint-config-web
+
+Plug and Play ESLint + Prettier configuration to format your Web Dev projects.
