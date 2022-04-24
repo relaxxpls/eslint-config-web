@@ -1,13 +1,23 @@
 module.exports = {
   root: true,
+
+  parser: "@babel/eslint-parser",
+
   parserOptions: {
+    requireConfigFile: false,
+    babelOptions: {
+      presets: ["@babel/preset-react"],
+    },
     ecmaFeatures: {
       impliedStrict: true,
+      jsx: true,
     },
     ecmaVersion: 2021,
     sourceType: "module",
   },
-  plugins: ["security", "prettier"],
+
+  plugins: ["html", "security", "prettier", "react-hooks"],
+
   extends: [
     "airbnb",
     "airbnb/hooks",
@@ -16,12 +26,17 @@ module.exports = {
     "plugin:node/recommended",
     "plugin:prettier/recommended",
     "plugin:promise/recommended",
-    "plugin:import/recommended",
   ],
+
   env: {
+    browser: true,
     es2021: true,
+    node: true,
+    jest: true,
   },
-  ignorePatterns: [".eslintrc.js", "node_modules/*"],
+
+  ignorePatterns: ["build/*", "node_modules/*", ".eslintrc.js"],
+
   rules: {
     "comma-dangle": ["error", "only-multiline"],
     "linebreak-style": "off",
@@ -77,5 +92,32 @@ module.exports = {
       "error",
       { ignores: ["modules"] },
     ],
+
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "warn",
+      {
+        aspects: ["invalidHref"],
+      },
+    ],
+
+    // ? React linting
+    "react/function-component-definition": [
+      "error",
+      {
+        namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function",
+      },
+    ],
+    "react/jsx-filename-extension": [
+      "error",
+      { extensions: [".js", ".jsx", ".ts", ".tsx", ".mdx"] },
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
   },
 };
