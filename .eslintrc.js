@@ -38,13 +38,24 @@ module.exports = {
   ignorePatterns: ["build/*", "node_modules/*", ".eslintrc.js"],
 
   rules: {
+    "arrow-body-style": ["error", "as-needed"],
     "comma-dangle": ["error", "only-multiline"],
     "linebreak-style": "off",
     "no-console": "warn",
     "no-debugger": "warn",
     "no-param-reassign": "error",
+    "no-return-assign": ["error", "except-parens"],
+    "no-restricted-syntax": [
+      "error",
+      "ForInStatement",
+      "LabeledStatement",
+      "WithStatement",
+    ],
+    "no-underscore-dangle": "off",
     "no-unused-expressions": "warn",
     "no-unused-vars": "warn",
+    // radix: 0,
+
     "import/extensions": [
       "error",
       "always",
@@ -100,8 +111,15 @@ module.exports = {
         aspects: ["invalidHref"],
       },
     ],
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        assert: "either",
+      },
+    ],
 
     // ? React linting
+    "react/display-name": "warn",
     "react/function-component-definition": [
       "error",
       {
@@ -119,5 +137,19 @@ module.exports = {
 
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+
+    "prettier/prettier": [
+      "error",
+      {
+        singleQuote: true,
+        tabWidth: 2,
+        useTabs: false,
+        semi: true,
+        trailingComma: "es5",
+        bracketSpacing: true,
+        endOfLine: "auto",
+        printWidth: 88,
+      },
+    ],
   },
 };
