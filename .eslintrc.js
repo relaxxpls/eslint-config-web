@@ -16,16 +16,17 @@ module.exports = {
     sourceType: "module",
   },
 
-  plugins: ["html", "security", "prettier", "react-hooks"],
+  plugins: ["security", "prettier", "react-hooks"],
 
   extends: [
-    "airbnb",
-    "airbnb/hooks",
-    "prettier",
-    "plugin:security/recommended",
+    "plugin:import/recommended",
     "plugin:node/recommended",
     "plugin:prettier/recommended",
     "plugin:promise/recommended",
+    "plugin:security/recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "prettier",
   ],
 
   env: {
@@ -35,7 +36,7 @@ module.exports = {
     jest: true,
   },
 
-  ignorePatterns: ["build/*", "node_modules/*", ".eslintrc.js"],
+  ignorePatterns: ["node_modules/*", ".eslintrc.js"],
 
   rules: {
     "arrow-body-style": ["error", "as-needed"],
@@ -55,7 +56,6 @@ module.exports = {
     "no-unused-expressions": "warn",
     "no-unused-vars": "warn",
     // radix: 0,
-
     "import/extensions": [
       "error",
       "always",
@@ -103,7 +103,7 @@ module.exports = {
       "error",
       { ignores: ["modules"] },
     ],
-
+    // ? React linting
     "jsx-a11y/href-no-hash": "off",
     "jsx-a11y/anchor-is-valid": [
       "warn",
@@ -117,8 +117,6 @@ module.exports = {
         assert: "either",
       },
     ],
-
-    // ? React linting
     "react/display-name": "warn",
     "react/function-component-definition": [
       "error",
@@ -134,10 +132,9 @@ module.exports = {
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
-
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-
+    // ? prettier config
     "prettier/prettier": [
       "error",
       {
