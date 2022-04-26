@@ -1,9 +1,4 @@
 module.exports = {
-  globals: {
-    React: true,
-    JSX: true,
-  },
-
   parser: '@typescript-eslint/parser',
 
   parserOptions: {
@@ -11,21 +6,20 @@ module.exports = {
     tsconfigRootDir: __dirname,
   },
 
-  plugins: ['@typescript-eslint'],
-
   extends: [
-    'airbnb-typescript',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:import/typescript',
-    // ? Layer in all the JS Rules
+    'airbnb-typescript',
     './.eslintrc.js',
+    'plugin:import/typescript',
   ],
 
   // ? Then we add our own custom typescript rules
   rules: {
     'no-redeclare': 'off',
-    // ? This allows us to use async function on addEventListener(). Discussion: https://twitter.com/wesbos/status/1337074242161172486
+    'no-useless-constructor': 'off',
+    'no-empty-function': 'off',
+    // ? This allows us to use async function on addEventListener().
+    // * Discussion: https://twitter.com/wesbos/status/1337074242161172486
     '@typescript-eslint/no-misused-promises': [
       'error',
       {
@@ -39,6 +33,15 @@ module.exports = {
         ignoreDeclarationMerge: true,
       },
     ],
-    '@typescript-eslint/interface-name-prefix': 'error',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-call': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      {
+        args: 'none',
+        ignoreRestSiblings: true,
+      },
+    ],
   },
 };
