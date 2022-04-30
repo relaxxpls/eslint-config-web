@@ -1,13 +1,5 @@
 module.exports = {
-  root: true,
-
-  parser: '@babel/eslint-parser',
-
   parserOptions: {
-    requireConfigFile: false,
-    babelOptions: {
-      presets: ['@babel/preset-react'],
-    },
     ecmaFeatures: {
       impliedStrict: true,
       jsx: true,
@@ -41,6 +33,7 @@ module.exports = {
   rules: {
     'arrow-body-style': ['error', 'as-needed'],
     'comma-dangle': ['error', 'only-multiline'],
+    'class-methods-use-this': 'off',
     'linebreak-style': 'off',
     'no-console': 'warn',
     'no-debugger': 'warn',
@@ -97,51 +90,7 @@ module.exports = {
     'node/no-unpublished-import': 'off',
     'node/no-unpublished-require': 'off',
     'node/no-unsupported-features/es-syntax': ['error', { ignores: ['modules'] }],
-    // ? React linting
-    'jsx-a11y/href-no-hash': 'off',
-    'jsx-a11y/anchor-is-valid': [
-      'warn',
-      {
-        aspects: ['invalidHref'],
-      },
-    ],
-    'jsx-a11y/label-has-associated-control': [
-      'error',
-      {
-        assert: 'either',
-      },
-    ],
-    'react/display-name': 'warn',
-    'react/function-component-definition': [
-      'error',
-      {
-        namedComponents: 'arrow-function',
-        unnamedComponents: 'arrow-function',
-      },
-    ],
-    'react/jsx-filename-extension': [
-      'error',
-      { extensions: ['.js', '.jsx', '.ts', '.tsx', '.mdx'] },
-    ],
-    'react/jsx-props-no-spreading': 'off',
-    'react/prop-types': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-    // ? prettier config
-    'prettier/prettier': [
-      'error',
-      {
-        singleQuote: true,
-        tabWidth: 2,
-        useTabs: false,
-        semi: true,
-        trailingComma: 'es5',
-        bracketSpacing: true,
-        endOfLine: 'auto',
-        printWidth: 88,
-      },
-    ],
+
     // ? React rules
     'jsx-a11y/href-no-hash': 'off',
     'jsx-a11y/anchor-is-valid': [
