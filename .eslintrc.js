@@ -13,12 +13,11 @@ module.exports = {
   extends: [
     'plugin:import/recommended',
     'plugin:node/recommended',
-    'plugin:prettier/recommended',
     'plugin:promise/recommended',
     'plugin:security/recommended',
     'airbnb',
     'airbnb/hooks',
-    'prettier',
+    'plugin:prettier/recommended',
   ],
 
   env: {
