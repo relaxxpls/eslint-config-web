@@ -16,22 +16,34 @@ yarn add --dev eslint prettier eslint-config-web
 
 ## Usage
 
-Create a `.eslintrc` file in the root of your project's directory (it should live where package.json does). Your `.eslintrc` file should look like this:
+### Javascript
 
-```json
-{
-    "extends": ["eslint-config-web"]
-}
+Create a `.eslintrc.js` file in the root of your project's directory (it should live where package.json does). Your `.eslintrc.js` file should look like this:
+
+```js
+module.exports = {
+  extends: [
+    "eslint-config-web",
+  ],
+};
 ```
 
-For TypeScript projects, use `wesbos/typescript`.
+### TypeScript
 
-```json
-{
-    "extends": ["eslint-config-web/typescript"]
-}
+Create a `.eslintrc.js` file in the root of your project's directory (it should live where package.json does). Your `.eslintrc.js` file should look like this:
+
+```js
+module.exports = {
+  parserOptions: {
+    project: "tsconfig.json",
+    tsconfigRootDir: __dirname,
+  },
+
+  extends: [
+    "eslint-config-web/typescript",
+  ],
+};
 ```
 
-TypeScript users will also need a `tsconfig.json` file in their project. An empty object (`{}`) will do if this is a new project.
-
-Note: You can alternatively put this object in your `package.json` under the property `"eslintConfig":`. This makes one less file in your project.
+TypeScript users will also need a `tsconfig.json` file in their project.
+An empty object (`{}`) will do if this is a new project.

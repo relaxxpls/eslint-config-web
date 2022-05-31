@@ -47,6 +47,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'no-unused-expressions': 'warn',
     'no-unused-vars': 'warn',
+    "no-use-before-define": "off",
     'import/extensions': [
       'error',
       'always',
