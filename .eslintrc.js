@@ -47,7 +47,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'no-unused-expressions': 'warn',
     'no-unused-vars': 'warn',
-    "no-use-before-define": "off",
+    'no-use-before-define': 'off',
     'import/extensions': [
       'error',
       'always',
@@ -89,7 +89,12 @@ module.exports = {
     'node/no-missing-import': 'off',
     'node/no-unpublished-import': 'off',
     'node/no-unpublished-require': 'off',
-    'node/no-unsupported-features/es-syntax': ['error', { ignores: ['modules'] }],
+    'node/no-unsupported-features/es-syntax': [
+      'error',
+      {
+        ignores: ['modules'],
+      },
+    ],
 
     // ? React rules
     'jsx-a11y/href-no-hash': 'off',
@@ -122,5 +127,19 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+
+    // ? Prettier rules
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        tabWidth: 2,
+        useTabs: false,
+        semi: true,
+        trailingComma: 'es5',
+        bracketSpacing: true,
+        endOfLine: 'auto',
+      },
+    ],
   },
 };

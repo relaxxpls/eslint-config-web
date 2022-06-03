@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-web",
-  "version": "0.6.3",
+  "version": "0.7.0",
   "description": "Plug and Play ESLint + Prettier configuration to format your Web Dev projects.",
   "scripts": {
     "lint": "eslint .",
