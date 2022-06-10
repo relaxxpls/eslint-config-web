@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-web",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "Plug and Play ESLint + Prettier configuration to format your Web Dev projects.",
   "scripts": {
     "lint": "eslint .",
@@ -17,7 +17,7 @@
     "config",
     "eslint-config"
   ],
-  "author": "Laxman Desai <lolopaw24@gmail.com> (https://github.com/relaxxpls)",
+  "author": "Laxman Desai <desai.laxman2001@gmail.com> (https://github.com/relaxxpls)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/relaxxpls/eslint-config-web/issues"
@@ -27,8 +27,8 @@
     "@babel/core": "^7.18.2",
     "@babel/eslint-parser": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
-    "@typescript-eslint/eslint-plugin": "^5.27.0",
-    "@typescript-eslint/parser": "^5.27.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "^8.5.0",
@@ -41,14 +41,14 @@
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
     "eslint-plugin-security": "^1.5.0",
-    "typescript": "^4.7.2"
+    "typescript": "^4.7.3"
   },
   "devDependencies": {
-    "eslint": "^8.16.0",
+    "eslint": "^8.17.0",
     "prettier": "^2.6.2"
   },
   "peerDependencies": {
-    "eslint": "^8.16.0",
+    "eslint": "^8.17.0",
     "prettier": "^2.6.2"
   },
   "engines": {
