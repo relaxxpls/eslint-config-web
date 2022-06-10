@@ -38,7 +38,6 @@ module.exports = {
     project: "tsconfig.json",
     tsconfigRootDir: __dirname,
   },
-
   extends: [
     "eslint-config-web/typescript",
   ],
@@ -47,3 +46,23 @@ module.exports = {
 
 TypeScript users will also need a `tsconfig.json` file in their project.
 An empty object (`{}`) will do if this is a new project.
+
+## JavaScript + TypeScript
+
+If you have both `.js` and `.ts` files in your project, you can use the following config to use the typescript rules only on `.ts` files.
+
+```js
+module.exports = {
+  parserOptions: {
+    project: "tsconfig.json",
+    tsconfigRootDir: __dirname,
+  },
+  extends: ["eslint-config-web"],
+  overrides: [
+    {
+      files: ["**/*.ts", "**/*.tsx"],
+      extends: ["eslint-config-web/typescript"],
+    },
+  ],
+};
+```
