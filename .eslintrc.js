@@ -124,6 +124,12 @@ module.exports = {
     ],
     'react/jsx-props-no-spreading': 'off',
     'react/prop-types': 'off',
+    'react/require-default-props': [
+      'error',
+      {
+        functions: 'defaultArguments',
+      },
+    ],
     'react/react-in-jsx-scope': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
