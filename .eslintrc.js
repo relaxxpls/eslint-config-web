@@ -37,6 +37,7 @@ module.exports = {
     'no-console': 'warn',
     'no-debugger': 'warn',
     'no-param-reassign': 'error',
+    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
     'no-return-assign': ['error', 'except-parens'],
     'no-restricted-syntax': [
       'error',
