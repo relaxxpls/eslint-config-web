@@ -19,6 +19,7 @@ module.exports = {
     'no-redeclare': 'off',
     'no-useless-constructor': 'off',
     'no-empty-function': 'off',
+    '@typescript-eslint/ban-ts-comment': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
     // ? This allows us to use async function on addEventListener().
     // * Discussion: https://twitter.com/wesbos/status/1337074242161172486
