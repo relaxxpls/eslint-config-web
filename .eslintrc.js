@@ -33,6 +33,7 @@ module.exports = {
     'arrow-body-style': ['error', 'as-needed'],
     'comma-dangle': ['error', 'only-multiline'],
     'class-methods-use-this': 'off',
+    'global-require': 'off',
     'linebreak-style': 'off',
     'no-console': 'warn',
     'no-debugger': 'warn',
