@@ -16,15 +16,18 @@ module.exports = {
 
   // ? Then we add our own custom typescript rules
   rules: {
-    'no-redeclare': 'off',
-    'no-useless-constructor': 'off',
     'no-empty-function': 'off',
+    'no-redeclare': 'off',
+    'no-shadow': 'off',
+    'no-useless-constructor': 'off',
     '@typescript-eslint/ban-ts-comment': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-floating-promises': 'off',
     // ? This allows us to use async function on addEventListener().
     // * Discussion: https://twitter.com/wesbos/status/1337074242161172486
     '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: false }],
     '@typescript-eslint/no-redeclare': ['warn', { ignoreDeclarationMerge: true }],
+    '@typescript-eslint/no-shadow': 'error',
     '@typescript-eslint/no-unsafe-assignment': 'warn',
     '@typescript-eslint/no-unused-vars': [
       'warn',
