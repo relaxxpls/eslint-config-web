@@ -87,6 +87,7 @@ module.exports = {
         warnOnUnassignedImports: true,
       },
     ],
+    'import/prefer-default-export': 'warn',
     // ? Handled by eslint-plugin-import
     'node/no-missing-import': 'off',
     'node/no-unpublished-import': 'off',
