@@ -12,7 +12,7 @@ module.exports = {
 
   extends: [
     'plugin:import/recommended',
-    'plugin:node/recommended',
+    'plugin:n/recommended',
     'plugin:promise/recommended',
     'plugin:security/recommended',
     'airbnb',
@@ -89,10 +89,10 @@ module.exports = {
     ],
     'import/prefer-default-export': 'warn',
     // ? Handled by eslint-plugin-import
-    'node/no-missing-import': 'off',
-    'node/no-unpublished-import': 'off',
-    'node/no-unpublished-require': 'off',
-    'node/no-unsupported-features/es-syntax': [
+    'n/no-missing-import': 'off',
+    'n/no-unpublished-import': 'off',
+    'n/no-unpublished-require': 'off',
+    'n/no-unsupported-features/es-syntax': [
       'error',
       {
         ignores: ['modules'],
