@@ -16,7 +16,7 @@ module.exports = {
   plugins: ['react', 'react-hooks', 'jsx-a11y'],
 
   extends: [
-    'plugin:node/recommended',
+    'plugin:n/recommended',
     'plugin:promise/recommended',
     'plugin:security/recommended',
     'plugin:import/recommended',
@@ -32,7 +32,7 @@ module.exports = {
     jest: true,
   },
 
-  ignorePatterns: ['**/node_modules/', '.eslintrc.js'],
+  ignorePatterns: ['**/node_modules/'],
 
   rules: {
     'arrow-body-style': ['error', 'as-needed'],
@@ -94,10 +94,10 @@ module.exports = {
     ],
     'import/prefer-default-export': 'warn',
     // ? Handled by eslint-plugin-import
-    'node/no-missing-import': 'off',
-    'node/no-unpublished-import': 'off',
-    'node/no-unpublished-require': 'off',
-    'node/no-unsupported-features/es-syntax': [
+    'n/no-missing-import': 'off',
+    'n/no-unpublished-import': 'off',
+    'n/no-unpublished-require': 'off',
+    'n/no-unsupported-features/es-syntax': [
       'error',
       {
         ignores: ['modules'],
@@ -159,6 +159,7 @@ module.exports = {
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        version: '>=16.0.0',
       },
     },
   },
