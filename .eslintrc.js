@@ -1,8 +1,13 @@
+const path = require('path');
+
 module.exports = {
   parserOptions: {
     ecmaFeatures: {
       impliedStrict: true,
       jsx: true,
+    },
+    babelOptions: {
+      configFile: path.resolve(__dirname, './babel.config.js'),
     },
     ecmaVersion: 2021,
     sourceType: 'module',
@@ -11,10 +16,10 @@ module.exports = {
   plugins: ['react', 'react-hooks', 'jsx-a11y'],
 
   extends: [
-    'plugin:import/recommended',
-    'plugin:n/recommended',
+    'plugin:node/recommended',
     'plugin:promise/recommended',
     'plugin:security/recommended',
+    'plugin:import/recommended',
     'airbnb',
     'airbnb/hooks',
     'plugin:prettier/recommended',
@@ -89,10 +94,10 @@ module.exports = {
     ],
     'import/prefer-default-export': 'warn',
     // ? Handled by eslint-plugin-import
-    'n/no-missing-import': 'off',
-    'n/no-unpublished-import': 'off',
-    'n/no-unpublished-require': 'off',
-    'n/no-unsupported-features/es-syntax': [
+    'node/no-missing-import': 'off',
+    'node/no-unpublished-import': 'off',
+    'node/no-unpublished-require': 'off',
+    'node/no-unsupported-features/es-syntax': [
       'error',
       {
         ignores: ['modules'],
@@ -149,5 +154,12 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
 };
