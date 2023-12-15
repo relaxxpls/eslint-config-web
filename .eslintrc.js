@@ -9,7 +9,6 @@ module.exports = {
     babelOptions: {
       configFile: path.resolve(__dirname, "./babel.config.js"),
     },
-    ecmaVersion: 2021,
     sourceType: "module",
   },
 
@@ -27,7 +26,7 @@ module.exports = {
 
   env: {
     browser: true,
-    es2021: true,
+    es2023: true,
     node: true,
     jest: true,
   },
@@ -85,27 +84,12 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "security/detect-object-injection": "off",
-
-    // ? Prettier rules
-    "prettier/prettier": [
-      "error",
-      {
-        tabWidth: 2,
-        useTabs: false,
-        semi: true,
-        trailingComma: "es5",
-        bracketSpacing: true,
-        endOfLine: "auto",
-        singleQuote: false,
-        printWidth: 120,
-      },
-    ],
   },
   settings: {
     "import/resolver": {
       node: {
         extensions: [".js", ".jsx", ".ts", ".tsx"],
-        version: ">=16.0.0",
+        version: ">=18.0.0",
       },
     },
   },
